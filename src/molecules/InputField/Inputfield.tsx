@@ -1,10 +1,10 @@
 import React from 'react';
-import CLButton from '../../atoms/buttons';
+import { CLBUtton } from '../../atoms/';
 
 const InputField = () => (
     <div>
         this is Inputfield
-        <CLButton>Add</CLButton>
+        <CLBUtton>Add</CLBUtton>
     </div>
 )
 
