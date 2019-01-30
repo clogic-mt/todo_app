@@ -1,10 +1,10 @@
 import React from 'react';
-import { CLBUtton, CLTextField} from '../../atoms';
+import { CLButton, CLTextField} from '../../atoms';
 
 const InputRow = () => (
     <div>
         <CLTextField/>
-        <CLBUtton>Add</CLBUtton>
+        <CLButton>Add</CLButton>
     </div>
 )
 

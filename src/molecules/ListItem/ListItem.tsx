@@ -1,10 +1,12 @@
 import React from 'react';
+import {CLButton, CLCheckbox} from '../../atoms';
 
 class ListItem extends React.PureComponent{
     render(){
         return(
             <div>
-                this is ListItem
+                <CLCheckbox></CLCheckbox>
+                <CLButton>Delete</CLButton>
             </div>
         )
     }

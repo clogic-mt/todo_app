@@ -1,7 +1,9 @@
-import CLBUtton from './Button/Button';
-import CLTextField from './TextField/TextField';
+import CLButton from './Button/Button';
+import CLCheckbox from './checkbox/checkbox'
+import CLTextField from './TextField/TextField'
 
 export {
-    CLBUtton,
-    CLTextField,
+    CLButton,
+    CLCheckbox,
+    CLTextField
 }

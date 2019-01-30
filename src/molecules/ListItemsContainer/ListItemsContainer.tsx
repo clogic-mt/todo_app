@@ -1,10 +1,11 @@
 import React from 'react';
+import ListItem from '../ListItem/ListItem'
 
 class ListItemsContainer extends React.PureComponent {
     render(){
         return(
             <div>
-                <h1>this is ListItemsContainer</h1>
+                <ListItem/>
             </div>
         )
     }
