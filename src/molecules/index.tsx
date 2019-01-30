@@ -1,10 +1,10 @@
 import ListItem from './ListItem/ListItem';
 import ListItemsContainer from './ListItemsContainer/ListItemsContainer';
-import InputField from './InputField/Inputfield';
+import InputRow from './InputRow/InputRow';
 
 
 export {
     ListItem,
     ListItemsContainer,
-    InputField
+    InputRow
 }
