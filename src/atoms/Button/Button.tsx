@@ -1,12 +1,13 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
+import * as React from 'react';
+import MUIButton, {ButtonProps as MUIButtonProps} from '@material-ui/core/Button';
 
-class CLButton extends React.PureComponent {
-    render(){
-        return(
-            <Button>{this.props.children}</Button>
-        )
-    }
+export interface ButtonProps extends MUIButtonProps {
 }
 
-export default CLButton
+export default class Button extends React.PureComponent<ButtonProps> {
+  public render() {
+    return (
+      <MUIButton {...this.props} />
+    );
+  }
+}

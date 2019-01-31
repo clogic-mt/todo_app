@@ -1,12 +1,12 @@
 import React from 'react';
-import TextField from '@material-ui/core/TextField';
+import MUTextField, {TextFieldProps} from '@material-ui/core/TextField';
 
-class CLTextField extends React.PureComponent {
+class TextField extends React.PureComponent<TextFieldProps> {
     render(){
         return(
-            <TextField/>
+            <MUTextField {...this.props}/>
         )
     }
 }
 
-export default CLTextField
+export default TextField

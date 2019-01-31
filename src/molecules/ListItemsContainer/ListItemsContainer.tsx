@@ -1,12 +1,16 @@
 import React from 'react';
 import ListItem from '../ListItem/ListItem'
 
-class ListItemsContainer extends React.PureComponent {
+export interface ListItemsContainerInterface {
+    toDoList: any[]
+}
+
+class ListItemsContainer extends React.PureComponent<ListItemsContainerInterface> {
     render(){
         return(
-            <div>
-                <ListItem itemName={'eat cheese'} isChecked={false}></ListItem>
-            </div>
+            this.props.toDoList.map((item)=>(
+                <ListItem itemName={item} isChecked={false}></ListItem>
+            ))
         )
     }
 }
