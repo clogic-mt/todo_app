@@ -1,10 +1,11 @@
 import React from 'react';
-import Checkbox from '@material-ui/core/Checkbox';
+import Checkbox, {CheckboxProps} from '@material-ui/core/Checkbox';
 
-class CLCheckbox extends React.PureComponent {
+
+class CLCheckbox extends React.PureComponent<CheckboxProps> {
     render(){
         return(
-            <Checkbox></Checkbox>
+            <Checkbox {...this.props}/>
         )
     }
 }

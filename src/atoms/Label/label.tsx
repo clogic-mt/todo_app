@@ -1,10 +1,10 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
+import Typography, {TypographyProps} from '@material-ui/core/Typography';
 
-class CLLabel extends React.PureComponent {
+class CLLabel extends React.PureComponent<TypographyProps> {
     render(){
         return(
-            <Typography variant="overline" gutterBottom>{this.props.children}</Typography>
+            <Typography variant="overline" gutterBottom {...this.props}/>
         )
     }
 }

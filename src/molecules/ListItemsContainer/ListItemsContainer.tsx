@@ -5,7 +5,7 @@ class ListItemsContainer extends React.PureComponent {
     render(){
         return(
             <div>
-                <ListItem/>
+                <ListItem itemName={'eat cheese'} isChecked={false}></ListItem>
             </div>
         )
     }

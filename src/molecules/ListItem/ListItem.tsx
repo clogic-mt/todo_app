@@ -1,14 +1,23 @@
 import React from 'react';
 import {CLButton, CLCheckbox, CLLabel} from '../../atoms';
+import { Color } from 'csstype';
+import color from '@material-ui/core/colors/amber';
 
-class ListItem extends React.PureComponent{
+export interface Props {
+    itemName: string,
+    isChecked: boolean
+}
+
+class ListItem extends React.PureComponent<Props>{
+
     render(){
         return(
             <div>
-                <CLLabel>test</CLLabel>
-                <CLCheckbox></CLCheckbox>
+                <CLLabel color={this.props.isChecked ? "error" : "primary"  }>{this.props.itemName}</CLLabel>
+                <CLCheckbox checked={this.props.isChecked}/>
                 <CLButton>Delete</CLButton>
             </div>
+
         )
     }
 }
