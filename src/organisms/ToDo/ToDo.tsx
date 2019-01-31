@@ -1,6 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 
 import {ListItemsContainer, InputRow} from '../../molecules';
 
@@ -20,7 +21,7 @@ class ToDo extends React.Component{
             <Grid justify="center" container>
                 <Grid item xs={5}>
                     <Paper style={{padding: '1em'}}>
-                        <h1>To Do app</h1>
+                        <Typography variant='title'>To Do app</Typography>
                         <InputRow onSubmit={this.addItem} />
                         <ListItemsContainer toDoList={this.state.toDolist}/>
                     </Paper>

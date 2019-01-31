@@ -8,8 +8,8 @@ export interface ListItemsContainerInterface {
 class ListItemsContainer extends React.PureComponent<ListItemsContainerInterface> {
     render(){
         return(
-            this.props.toDoList.map((item)=>(
-                <ListItem itemName={item} isChecked={false}></ListItem>
+            this.props.toDoList.map((item, index)=>(
+                <ListItem key={index} itemName={item} isChecked={false}></ListItem>
             ))
         )
     }

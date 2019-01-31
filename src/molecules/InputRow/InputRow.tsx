@@ -31,7 +31,8 @@ class InputRow extends React.PureComponent<InputRowProps>{
                     value={this.state.inputValue}
                     onChange= {(event) => this.handleChange(event)}
                 />
-                <Button 
+                <Button
+                    disabled={this.state.inputValue.length === 0}
                     disableRipple
                     variant="contained"
                     color="primary"
