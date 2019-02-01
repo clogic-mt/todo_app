@@ -7,7 +7,9 @@ import color from '@material-ui/core/colors/amber';
 
 export interface Props {
     itemName: string,
-    isChecked: boolean
+    onChange: () => void,
+    onDelete: () => void,
+    isChecked: boolean,
 }
 
 const StyledDiv = Styled.div`
@@ -16,16 +18,20 @@ const StyledDiv = Styled.div`
     justify-content: space-between;
 `;
 
-
 class ListItem extends React.PureComponent<Props>{
-
     render(){
         return(
             <StyledDiv>
-                <CLLabel color={this.props.isChecked ? "error" : "primary"  }>{this.props.itemName}</CLLabel>
+                <CLLabel 
+                    linethrough = {this.props.isChecked}
+                    color={this.props.isChecked ? "error" : "primary"  }
+                >{this.props.itemName}</CLLabel>
                 <div> 
-                    <CLCheckbox checked={this.props.isChecked}/>
-                    <Button>Delete</Button>
+                    <CLCheckbox 
+                        onChange={this.props.onChange}
+                        checked={this.props.isChecked}
+                    />
+                    <Button onClick={() => this.props.onDelete()}>Delete</Button>
                 </div>
             </StyledDiv>
 
